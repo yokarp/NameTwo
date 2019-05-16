@@ -19,11 +19,29 @@ public class AppCliente {
 	public static void main(String[] args) {
 	
 		AppCliente app=new AppCliente();
+		Scanner teclado = new Scanner(System.in);
+		while(true) {
+	    System.out.println("Seleccione la opción deseada:\n1.Adicionar Cliente\n2.Listar clientes\n3.Consultar Cliente\n4.Modificar Cliente\n5.Borrar cliente");
+	    int aux = teclado.nextInt();
+		switch(aux) {
+		case 1:
 		app.seleccionarOpcion(1);
-		app.seleccionarOpcion(2);
-		app.seleccionarOpcion(3);
-		app.seleccionarOpcion(4);
-		app.seleccionarOpcion(5);
+		break;
+			case 2:
+			app.seleccionarOpcion(2);
+			break;
+				case 3:
+				app.seleccionarOpcion(3);
+				break;
+					case 4:
+					app.seleccionarOpcion(4);
+					break;
+						case 5:
+						app.seleccionarOpcion(5);
+						break;
+							default: System.out.println("COOOOMMMAAA MIERDA!!!");
+		}
+	}
 	}
 	
 	public void seleccionarOpcion(int opc) {

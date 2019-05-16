@@ -53,7 +53,7 @@ public class ProcesoInformacionCliente {
 		    String apellido = unCliente.getApellido();
 		    String telefono = unCliente.getTelefono();
 		    String correo = unCliente.getCorreo();
-		    String registroCliente = "INSERT INTO cliente(codigocli,apellidocli,telefonocli,correocli) VALUES ("+codigo+","+nombre+","+apellido+","+telefono+","+correo+")";
+		    String registroCliente = "INSERT INTO cliente(codigocli,apellidocli,telefonocli,correocli) VALUES ("+codigo+","+nombre+","+apellido+","+telefono+","+correo+");";
 		    
 		    try{
 		        PreparedStatement inst =
@@ -79,7 +79,7 @@ public class ProcesoInformacionCliente {
 		             String apellido ="";
 		             String telefono ="";
 		             String correo ="";
-		             String consultaSql ="SELECT *FROM cliente WHERE codigocli = "+codigoCliente+"";
+		             String consultaSql ="SELECT *FROM cliente WHERE codigocli = "+codigoCliente+";";
 		             try{
 		                 PreparedStatement inst =
 		                 conexion.getConnection().prepareStatement(consultaSql);
@@ -105,7 +105,7 @@ public class ProcesoInformacionCliente {
 		}
 		
 		public void actualizarDatosCliente(String codigo, String nombre, String apellido,String telefono, String correo ){
-		    String actualizarSql ="UPDATE cliente SET nombrecli="+nombre+",apellidocli="+apellido+",correocli="+correo+" WHERE codigocli="+codigo+"";
+		    String actualizarSql ="UPDATE cliente SET nombrecli="+nombre+",apellidocli="+apellido+",correocli="+correo+" WHERE codigocli="+codigo+";";
 		    
 		    try {
 		    	PreparedStatement inst =
@@ -126,7 +126,7 @@ public class ProcesoInformacionCliente {
 		
 		public void borrarDatosCliente(String codigoCliente) {
 			String codigo= codigoCliente;
-			String borraSql = "DELETE FROM cliente WHERE codigocli ="+codigoCliente+"";
+			String borraSql = "DELETE FROM cliente WHERE codigocli ="+codigoCliente+";";
 			try {
 				PreparedStatement inst =
 				conexion.getConnection().prepareStatement(borraSql);
