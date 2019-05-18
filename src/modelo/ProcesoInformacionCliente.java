@@ -52,8 +52,8 @@ public class ProcesoInformacionCliente {
 		    String nombre = unCliente.getNombre();
 		    String apellido = unCliente.getApellido();
 		    String telefono = unCliente.getTelefono();
-		    String correo = unCliente.getCodigo();
-		    String registroCliente = "INSERT INTO cliente(codigocli,apellidocli,telefonocli,correocli) VALUES (?,?,?,?,?)";
+		    String correo = unCliente.getCorreo();
+		    String registroCliente = "INSERT INTO cliente(codigocli,nombrecli,apellidocli,telefonocli,correocli) VALUES (?,?,?,?,?)";
 		    
 		    try{
 		        PreparedStatement inst =

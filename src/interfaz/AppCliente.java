@@ -68,15 +68,15 @@ public class AppCliente {
 	private void modificarCliente() {
 		System.out.println("\nActualizar datos \n");
     	System.out.println("Inserte el código");
-    	String codigo= input.next();
+    	String codigo= input.nextLine();
     	System.out.println("Inserte el nombre");
-    	String nombre= input.next();
+    	String nombre= input.nextLine();
     	System.out.println("Inserte el apellido");
-    	String apellido= input.next();
+    	String apellido= input.nextLine();
     	System.out.println("Inserte el telefono");
-    	String telefono= input.next();
+    	String telefono= input.nextLine();
     	System.out.println("Inserte el correo");
-    	String correo= input.next();
+    	String correo= input.nextLine ();
 		System.out.println("actualizar");
 		procesoCliente.actualizarDatosCliente(codigo,nombre,apellido,telefono,correo);
 	}
@@ -90,15 +90,15 @@ public class AppCliente {
     	this.cliente=new Cliente();
     	
     	System.out.println("Inserte el código");
-    	String codigo= input.next();
+    	String codigo= input.nextLine();
     	System.out.println("Inserte el nombre");
-    	String nombre= input.next();
+    	String nombre= input.nextLine();
     	System.out.println("Inserte el apellido");
-    	String apellido= input.next();
+    	String apellido= input.nextLine();
     	System.out.println("Inserte el telefono");
-    	String telefono= input.next();
+    	String telefono= input.nextLine();
     	System.out.println("Inserte el correo");
-    	String correo= input.next();
+    	String correo= input.nextLine();
     	
     	cliente.setCodigo(codigo);
     	cliente.setNombre(nombre);
